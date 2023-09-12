@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/ec366b3a1c.js" crossorigin="anonymous"></script>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+            /* border: 2px solid red; */
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #p3 {
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(39, 75, 144);
+            /* height: 500px; */
+            width: 100%;
+        }
+
+        #card3 {
+            height: 540px;
+            width: 350px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            border: 1px solid black;
+            /* padding: 5px; */
+            /* text-align: center;
+            position: relative;
+            overflow: hidden; */
+        }
+
+        #stories {
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+            white-space: nowrap;
+            overflow-x: auto;
+            overflow-y: hidden;
+        }
+
+        #stories::-webkit-scrollbar {
+            display: none;
+        }
+
+        .story {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid red;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .story img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            cursor: pointer;
+        }
+        .feed{
+            height: 430px;
+            overflow: scroll;
+        }
+        .feed::-webkit-scrollbar {
+            display: none;
+        }
+
+        .post{
+            margin: 18px 10px;
+            position: relative;
+        }
+        .dp{
+            border: 2px solid red;
+            margin-right: 5px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            width: 35px;
+            height: 35px;
+        }
+        .userinfo{
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .userinfo span{
+            font-weight: 600;
+        }
+        .postedimg{
+            position: relative;
+        }
+        .postimg{
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            height: 360px;
+        }
+        .heart{
+            color: red;
+        }
+        .postedimg i{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .action{
+            cursor: pointer;
+            font-size: 23px;
+            margin: 15px 15px 0 0;
+        }
+        .fa-bookmark{
+            position: absolute;
+            right: 0;
+            bottom: 9px;
+            margin-right:2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="p3">
+        <div id="card3">
+            <div id="stories">
+                <div id="s1" class="story"><img
+                        src="https://plus.unsplash.com/premium_photo-1673792686302-7555a74de717?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Z2lybHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=400&q=60"
+                        alt=""></div>
+                <div id="s1" class="story"><img
+                        src="https://images.unsplash.com/photo-1543096222-72de739f7917?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+                        alt=""></div>
+                <div id="s1" class="story"><img
+                        src="https://plus.unsplash.com/premium_photo-1672907031715-fa4214fc3803?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+                        alt=""></div>
+                <div id="s1" class="story"><img
+                        src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80"
+                        alt=""></div>
+                <div id="s1" class="story"><img
+                        src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+                        alt=""></div>
+                <div id="s1" class="story"><img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80"
+                        alt=""></div>
+            </div>
+            <hr>
+            <div class="feed">
+            <div class="post">
+                <div class="userinfo">
+                    <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80" alt="" class="dp"></span>
+                    <span>_.bhavya._</span>
+                </div>
+                <div class="postedimg">
+                <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1335&q=80" alt="" class="postimg">
+                <i class="heart fa-solid fa-heart" style="color: red;"></i>
+                </div>
+                <i class="fa-regular fa-heart fa-lg action" style="color: #2c1313;"></i>
+                <i class="fa-regular fa-comment fa-lg action" style="color: #000000;"></i>
+                <i class="fa-regular fa-share-from-square fa-lg action" style="color: #000000;"></i>
+                <i class="fa-regular fa-bookmark fa-lg action" style="color: #000000;"></i>
+            </div>
+            <div class="post">
+                <div class="userinfo">
+                    <img src="https://www.redditinc.com/assets/images/site/reddit-logo.png" alt="" class="dp"></span>
+                    <span>creepy_reddit</span>
+                </div>
+                <div class="postedimg">
+                <img src="https://images.unsplash.com/photo-1604919335926-6c648c481853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1286&q=80" alt="" class="postimg">
+                <i class="heart fa-solid fa-heart" style="color: red;"></i>
+                </div>
+                <i class="fa-regular fa-heart fa-lg action" style="color: #2c1313;"></i>
+                <i class="fa-regular fa-comment fa-lg action" style="color: #000000;"></i>
+                <i class="fa-regular fa-share-from-square fa-lg action" style="color: #000000;"></i>
+                <i class="fa-regular fa-bookmark fa-lg action" style="color: #000000;"></i>
+            </div>
+            <div class="post">
+                <div class="userinfo">
+                    <img src="https://images.unsplash.com/photo-1488161628813-04466f872be2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1364&q=80" alt="" class="dp"></span>
+                    <span>HazeAlexander48</span>
+                </div>
+                <div class="postedimg">
+                <img src="https://images.unsplash.com/photo-1544283253-60f5aac56545?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" alt="" class="postimg">
+                <i class=" heart fa-solid fa-heart" style="color: red;"></i>
+                </div>
+                <i class="fa-regular fa-heart fa-lg action" style="color: #2c1313;"></i>
+                <i class="fa-regular fa-comment fa-lg action" style="color: #000000;"></i>
+                <i class="fa-regular fa-share-from-square fa-lg action" style="color: #000000;"></i>
+                <i class="fa-regular fa-bookmark fa-lg action" style="color: #000000;"></i>
+            </div>
+            <div class="post">
+                <div class="userinfo">
+                    <img src="https://img.freepik.com/free-photo/athletic-shirtless-young-male-fitness-model-holds-dumbbell-with-light-isolated-dark-background_613910-20.jpg?size=626&ext=jpg&ga=GA1.2.76708382.1692799831&semt=sph" alt="" class="dp"></span>
+                    <span>_.workoutwith_me</span>
+                </div>
+                <div class="postedimg">
+                <!-- <img src="https://images.unsplash.com/photo-1544283253-60f5aac56545?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" alt="" class="postimg"> -->
+                <video src="images/gym.mp4" type="video/mp4" class="postvid" width="100%" height="360px" autoplay loop></video>
+                <i class="heart fa-solid fa-heart" style="color: red;"></i>
+                </div>
+                <i class="fa-regular fa-heart fa-lg action" style="color: #2c1313;"></i>
+                <i class="fa-regular fa-comment fa-lg action" style="color: #000000;"></i>
+                <i class="fa-regular fa-share-from-square fa-lg action" style="color: #000000;"></i>
+                <i class="fa-regular fa-bookmark fa-lg action" style="color: #000000;"></i>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let postimg=document.querySelectorAll(".postimg");
+        let heart=document.querySelector(".heart");
+        let card3=document.querySelector("#card3")
+        console.log(heart);
+
+        console.log(postimg);
+
+        for(const img of postimg){
+            console.log(img);
+            addEventListener("click", function(){
+                    heart.style.color="pink";
+            })
+        }
+    </script>
+</body>
+</html>
